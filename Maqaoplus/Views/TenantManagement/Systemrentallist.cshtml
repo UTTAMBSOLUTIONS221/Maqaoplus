@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Systemrentallist";
+    Layout = "~/Views/Shared/_Customerlayout.cshtml";
+}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card card-outline card-info">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h6 class="font-weight-bold text-sm card-title">Rentals</h6>
+                    </div>
+                    <div class="col-sm-2">
+                        <a asp-action="Addsystemrental" asp-controller="TenantManagement" asp-route-code="@Guid.NewGuid()" asp-route-RentalId="0" asp-area="" class="btn-info btn-xs btn-outline-info text-white font-weight-bold text-uppercase float-right" data-target="#FuelcardsystemModalLarge" data-toggle="modal" data-backdrop="static" data-keyboard="false">Add Rental</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        var currentStep = 0;
+        var steps = document.querySelectorAll('.step');
+
+        function prevStep() {
+            if (currentStep > 0) {
+                steps[currentStep].style.display = 'none';
+                currentStep--;
+                steps[currentStep].style.display = 'block';
+            }
+        }
+
+        function nextStep() {
+            if (currentStep < steps.length - 1) {
+                steps[currentStep].style.display = 'none';
+                currentStep++;
+                steps[currentStep].style.display = 'block';
+            }
+        }
+    </script>
+}

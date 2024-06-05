@@ -1,0 +1,42 @@
+﻿@model Maqaoplus.Entities.Maqao.Rentalhousedata
+<div class="modal-header">
+    <h5 class="text-sm modal-title" id="SocialPesaModalLabel">Rental House Data</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row" hidden>
+        <input class="form-control form-control-sm" id="ProductBrandId" />
+    </div>
+    <div id="wizard">
+        <!-- Step 1 -->
+        <div class="step">
+            <h3>Step 1</h3>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="font-weight-light">Rental Name</label>
+                        <input class="form-control form-control-sm" id="ProductBrandNameId" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+            <h3>Step 2</h3>
+            <p>This is step 2 content.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+            <h3>Step 3</h3>
+            <p>This is step 3 content.</p>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+    <button class="btn btn-sm btn-info font-weight-bold" type="button" onclick="savesystemproductbranddetails();">Add</button>
+</div>
